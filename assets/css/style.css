@@ -20775,8 +20775,8 @@ body.white-version .rn-btn-ulderline {
 
 
 .slide .thumbnail.rgb-circle {
-    width: 400px; /* Increased from 300px for larger size */
-    height: 400px; /* Increased from 300px for larger size */
+    width: 400px; /* Default size */
+    height: 400px; /* Default size */
     margin: 0;
     position: relative;
     top: 50%;
@@ -20835,11 +20835,36 @@ body.white-version .rn-btn-ulderline {
     align-items: center !important;
 }
 
-/* Make sure image is vertically aligned on mobile too */
+/* Adjust image size and spacing on mobile */
 @media only screen and (max-width: 767px) {
     .slide .thumbnail.rgb-circle {
+        width: 250px; /* Reduced size for mobile */
+        height: 250px; /* Reduced size for mobile */
         margin: 0 auto;
         margin-top: 30px; /* Space between text and image on mobile */
-        transform: translateY(-10%); /* Centers it vertically */
+        transform: translateY(0); /* Reset transform to avoid excessive vertical shift */
+    }
+
+    .slide .thumbnail.rgb-circle .inner {
+        width: calc(100% - 10px); /* Adjust inner size */
+        height: calc(100% - 10px); /* Adjust inner size */
+        top: 5px; /* Adjust for inner content */
+        left: 5px; /* Adjust for inner content */
+    }
+
+    /* Add padding across the whole website */
+    body {
+        padding: 15px; /* Add padding to the body */
+    }
+
+    /* Optional: Add padding for other key elements */
+    .container, .row, .col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* If you have specific elements like header or footer */
+    header, footer {
+        padding: 15px;
     }
 }
