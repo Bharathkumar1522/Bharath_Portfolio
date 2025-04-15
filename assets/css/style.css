@@ -20854,17 +20854,17 @@ body.white-version .rn-btn-ulderline {
 
     /* Add padding across the whole website */
     body {
-        padding: 15px; /* Add padding to the body */
+        padding: 10px; /* Add padding to the body */
     }
 
     /* Optional: Add padding for other key elements */
     .container, .row, .col {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     /* If you have specific elements like header or footer */
     header, footer {
-        padding: 15px;
+        padding: 10px;
     }
 }
